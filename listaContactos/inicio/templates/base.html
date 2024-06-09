@@ -3,6 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título por Defecto{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+        <h1>Encabezado de mi sitio</h1>
+        {% endblock %}
+        {% include "nav.html" %}
+    </header>
+    
+    <main>
+        {% block content %}
+        <p>Contenido por defecto</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codigo para Estudiantes</title>
 </head>
 <body>
