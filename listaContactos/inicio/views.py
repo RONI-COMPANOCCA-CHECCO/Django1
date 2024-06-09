@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def myHomeView(*args, **kwargs):
+    print(args, kwargs)
+    print(request.user)
     return HttpResponse("<h1>HOLA MUNDO DESDE DJANGO</h1>")
 
 def anotherView(request):
