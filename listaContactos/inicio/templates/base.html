@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Título por Defecto{% endblock %}</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>{% block title %}PWEB 2{% endblock %}</title>
 </head>
 <body>
     <header>
         {% block header %}
-        <h1>5. Encabezado de mi sitio</h1>
-            <h1>Encabezado de mi sitio</h1>
+            <h1>Laboratorio de Programacion Web 2</h1>
         {% endblock %}
         {% include "nav.html" %}
     </header>
     
     <main>
         {% block content %}
-            <p>Contenido por defecto</p>
         {% endblock %}
     </main>
+
+    <section>
+        {% block about %}
+            <h2>Quiénes somos</h2>
+            <p>Información sobre nuestra empresa o proyecto.</p>
+        {% endblock %}
+    </section>
 
     <footer>
         {% block footer %}
@@ -27,3 +33,4 @@
     </footer>
 </body>
 </html>
+
