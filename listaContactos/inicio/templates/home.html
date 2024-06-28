@@ -3,9 +3,10 @@
 {% block title %}Inicio - Mi Sitio Web{% endblock %}
 
 {% block content %}
-    <h1>Hola mundo</h1>
-    <h1>con template</h1>
-    {{ request.user }}
-    <br>
-    {{ request.user.is_authenticated }}
+    <h2>Hola Mundo desde Djando</h2>
+    <h3>con template</h3>
+    <p>
+        {{myText}}
+        {{myNumber}}
+    </p>
 {% endblock %}
