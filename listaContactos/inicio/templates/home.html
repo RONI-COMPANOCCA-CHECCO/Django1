@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template base</title>
-</head>
-<body>
-    {% extends "base.html" %}
-    {% block content %}
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Mi Sitio Web{% endblock %}
+
+{% block content %}
     <h1>Hola mundo</h1>
     <h1>con template</h1>
-    {{ request.user}}
+    {{ request.user }}
     <br>
     {{ request.user.is_authenticated }}
-    {% endblock %}
-</body>
-</html>
+{% endblock %}
