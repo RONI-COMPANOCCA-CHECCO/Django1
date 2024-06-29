@@ -3,15 +3,21 @@
 {% block title %}Inicio - Mi Sitio Web{% endblock %}
 
 {% block content %}
-    <h2>Hola Mundo desde Djando</h2>
+    <h2>Hola Mundo desde Django</h2>
     <h3>con template</h3>
-    <p>
-        {{myText}}
-        {{myNumber}}
-    </p>
+
+    {% if myText and myNumber %}
+        <p>
+            {{ myText }} {{ myNumber }}
+        </p>
+    {% endif %}
+
     <ul>
-        {% for myItem in myList %}
-        <li>{{forloop.counter}}-{{myItem}}</li>
+        {% for item in myList %}
+            <li>{{ forloop.counter }} - {{ item }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
+
+
+
