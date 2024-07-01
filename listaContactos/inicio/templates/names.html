@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Nombres - Mi Sitio Web{% endblock %}
+
+{% block content %}
+    <h2>Lista de Nombres</h2>
+
+    {% if myText and myNumber %}
+        {% filter upper %}
+        <p>
+            {{ myText }}, 
+            {{ myNumber|floatformat:2 }}
+        </p>
+        {% endfilter %}
+    {% endif %}
+
+    {% if nombres %}
+        <ul>
+            {% for nombre in nombres %}
+                <li>{{ forloop.counter }} - {{ nombre|capfirst }}
+                    {% if nombre == "Bob" %}
+                        - este nombre es fantástico
+                    {% elif forloop.counter == 3 %}
+                        - este es el tercer nombre
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

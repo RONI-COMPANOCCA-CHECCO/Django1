@@ -12,9 +12,10 @@ def myNamesView(request, *args, **kwargs):
     myContext = {
         "myText": "Lista de nombres.",
         "myNumber": 456,
-        "myList": ["Alice", "Bob", "Charlie"],
+        "nombres": ["Alice", "Bob", "Charlie"],
     }
-    return render(request, "home.html", myContext)
+    return render(request, "names.html", myContext)
+
 
 
 
