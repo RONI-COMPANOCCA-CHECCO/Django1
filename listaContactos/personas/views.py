@@ -12,7 +12,9 @@ def personaCreateView(request):
     form = PersonaForm(request.POST or None)
     if form.is_valid():
         form.save()
-        form = PersonaForm()
+        form = PersonaForm()  
+    else:
+        print(form.errors)  
 
     context = {
         "form": form
