@@ -16,8 +16,5 @@ def myNamesView(request, *args, **kwargs):
     }
     return render(request, "names.html", myContext)
 
-
-
-
 #def about_view(request):
     #return render(request, 'about.html')
