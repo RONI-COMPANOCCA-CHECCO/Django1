@@ -7,3 +7,14 @@ def personaTestView(request):
         "objeto": obj,
     }
     return render(request, "personas/test.html", context)
+
+def personaCreateView(request):
+    form = PersonaForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        form = PersonaForm()
+
+    context = {
+        "form": form
+    }
+    return render(request, "personas/personasCreate.html", context)
