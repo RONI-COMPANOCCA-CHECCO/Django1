@@ -9,7 +9,7 @@ def personaTestView(request):
     }
     return render(request, "personas/test.html", context)
 
-def personaCreateView(request):
+def personasAnotherCreateView(request):
     form = RawPersonaForm()
     context ={
         "form": form,
