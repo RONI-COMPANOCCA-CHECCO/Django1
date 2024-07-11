@@ -12,7 +12,7 @@ class PersonaForm(forms.ModelForm):
             raise forms.ValidationError("La edad debe ser un número positivo.")
         return edad
 class RawPersonaForm(forms.Form):
-    nombres = forms.CharField()
+    nombres = forms.CharField(label="tu nombre")
     apellidos = forms.CharField()
-    edad = forms.IntegerField()
+    edad = forms.IntegerField(initial=20)
     donador = forms.BooleanField()
